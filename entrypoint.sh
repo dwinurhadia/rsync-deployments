@@ -14,5 +14,4 @@ LOCAL_PATH="$GITHUB_WORKSPACE/$INPUT_PATH"
 DSN="$INPUT_REMOTE_USER@$INPUT_REMOTE_HOST"
 
 # Deploy.
-sh -c "rsync $SWITCHES -e '$RSH' $LOCAL_PATH $DSN:$INPUT_REMOTE_PATH"
-sh -c "touch /var/www/html/testing.php"
+sh -c "rsync $SWITCHES -e '$RSH' $LOCAL_PATH $DSN:$INPUT_REMOTE_PATH && touch /var/www/html/kodok.txt"
